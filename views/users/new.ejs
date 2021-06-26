@@ -1,0 +1,16 @@
+<div class='data-form' >
+    <form action='/users/create' method='POST' >
+        <h2>Create a new user</h2>
+        <label for='inputFirst' >First</label>
+        <input id='inputFirst' name='first' type='text' placeholder='First' autofocus>
+        <label for='inputLast' >Last</label>
+        <input id='inputLast' name='last' type='text' placeholder='Last' >
+        <label for='inputEmail'>Email</label>
+        <input type='text' id='inputEmail' name='email' placeholder='Email' >
+        <label for='inputZipCode'>Zip Code</label>
+        <input type='Number' id='inputZipCode' name='zipCode' pattern='[0-9]{5}' placeholder='Zip Code' >
+        <label for="inputPassword">Password</label>
+        <input type="password" id="inputPassword" name="password" placeholder="Password" >
+        <button type='submit'>Create</button>
+    </form>
+</div>

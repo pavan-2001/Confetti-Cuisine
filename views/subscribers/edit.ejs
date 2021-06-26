@@ -1,0 +1,10 @@
+<form action="<%=`/subscribers/${subscriber._id}/update?_method=PUT`%>" method='POST'>
+    <h2>Edit the existing Subscriber</h2>
+    <label for='inputName'>Name</label>
+    <input type='text' id='inputName' name='name' value='<%=subscriber.name %>' placeholder='Name' autofocus>
+    <label for='inputEmail'>Email</label>
+    <input type='text' id='inputEmail' name='email' value='<%=subscriber.email %>' placeholder='Email' required>
+    <label for='inputZipCode'>Zip Code</label>
+    <input type='number' id='inputZipCode' name='zipCode' value='<%=subscriber.zipCode%>' placeholder='Zip Code' pattern='[0-9]{5}' required>
+    <button type='submit'>Save</button>
+</form>

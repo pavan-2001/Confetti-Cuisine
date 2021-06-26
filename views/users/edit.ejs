@@ -1,0 +1,14 @@
+<form action="<%=`/users/${user._id}/update?_method=PUT`%>" method='POST'>
+    <h2>Edit the existing user</h2>
+    <label for='inputFirst'>First Name</label>
+    <input type='text' id='inputFirst' name='first' value='<%=user.name.first %>' placeholder='First Name' autofocus>
+    <label for='inputLast'>Last Name</label>
+    <input type='text' id='inputLast' name='last' value='<%=user.name.last %>' placeholder='Last Name' required>
+    <label for='inputEmail'>Email</label>
+    <input type='text' id='inputEmail' name='email' value='<%=user.email%>' placeholder='Email'  required>
+    <label for='inputZipCode'>Zip Code</label>
+    <input type='number' id='inputZipCode' name='zipCode' value='<%=user.zipCode%>' placeholder='Zip Code' pattern='[0-9]{5}' required>
+    <label for="inputPassword">Password</label>
+    <input type="password" id="inputPassword" name="password" value="<%=user.password%>" placeholder="Password" required>
+    <button type='submit'>Save</button>
+</form>
