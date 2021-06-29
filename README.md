@@ -15,4 +15,4 @@
 ## Screenshots
 
 **Title and Navigation bar**
-[<img src="/screenshots/Header.jpg" width="100" height="50"/>](/screenshots/Header.jpg)
+[<img src="/screenshots/Header.jpg" width="300" height="200"/>](/screenshots/Header.jpg)
