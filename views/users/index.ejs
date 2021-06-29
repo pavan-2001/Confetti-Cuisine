@@ -1,33 +1,35 @@
 <h2 class='center' >Users Table</h2>
-<table class='table' >
-    <thread>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-    </thread>
-    <tbody>
-        <% users.forEach( (user) => { %>
+<div class="table-wrapper">
+    <table class='fl-table' >
+        <thead>
             <tr>
-                <td>
-                    <a href="<%= `/users/${user._id}`%>"><%= user.fullName %></a>
-                </td>
-                <td>
-                    <%= user.email %>
-                </td>
-                <td>
-                    <a href="<%=`/users/${user._id}/edit`%>">
-                        edit
-                    </a>
-                </td>
-                <td>
-                    <a href="<%=`/users/${user._id}/delete?_method=DELETE`%>" onclick="return confirm('Are you sure you want to delete this record?')" > 
-                        delete
-                    </a>
-                </td>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
-        <%}) %>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <% users.forEach( (user) => { %>
+                <tr>
+                    <td>
+                        <a href="<%= `/users/${user._id}`%>"><%= user.fullName %></a>
+                    </td>
+                    <td>
+                        <%= user.email %>
+                    </td>
+                    <td>
+                        <a href="<%=`/users/${user._id}/edit`%>">
+                            edit
+                        </a>
+                    </td>
+                    <td>
+                        <a href="<%=`/users/${user._id}/delete?_method=DELETE`%>" onclick="return confirm('Are you sure you want to delete this record?')" > 
+                            delete
+                        </a>
+                    </td>
+                </tr>
+            <%}) %>
+        </tbody>
+    </table>
+</div>

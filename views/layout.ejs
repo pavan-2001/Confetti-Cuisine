@@ -1,85 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Confetti Cuisine</title>
-        <meta char="utf-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <style>
-            * {
-                box-sizing : border-box;
-                flex : 1;
-            }
-            body {
-                font-family :Arial, Helvetica, sans-serif;
-            }
-            header {
-                text-align : center;
-                align-items: center;
-                font-size: 100px;
-                color : black;
-                font-family:fantasy ;
-            }
-            header h1{
-                font-size: 60px;
-                font-family :-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                border-color: azure;
-                font-style:italic;
-            }
-            header button {
-                width: 15%;
-                background-color : black;
-                color : white;
-                border-radius: 10%;
-                height: 35px;
-                cursor: pointer;
-                align-self:center;
-                margin-left: 3%;
-                margin-right: 3%;
-                font-style: italic;
-                font-family: cursive;
-            }
-        </style>
-        <header>
-            CONFETTI CUISINE
-            <nav>
-                <button type="button" onclick="location.href='http://localhost:3000'">Home</button>
-                <button type="button" onclick="location.href='http://localhost:3000/courses'">Courses</button>
-                <button type="button" onclick="location.href='http://localhost:3000/subscribers/new'">Contact</button>
-                <button type="button" onclick="location.href='http://localhost:3000/users'">Users</button>
-            </nav>
-            <a href="/chat" class="chat-icon">@</a>
-        </header>
-        <ul><li><%- include('courses/_courseModal')%></li></ul>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel=”stylesheet” href=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I” crossorigin=”anonymous”>
+        <link ref="stylesheet" type="text/css" href="dist/snackbar.min.css" /> <script src="dist/snackbar.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
     <body>
-        <div class='flashes'>
-            <%if(flashMessages) {%>
+        <div class="sample-header">
+            <div class="sample-header-section">
+              <h1>Confetti Cuisine</h1>
+            </div>
+            <div class="navigation-bar">
+                <a class="navigation-bar-a" href="http://localhost:3000">Home</a>
+                <a class="navigation-bar-a" href="http://localhost:3000/courses">Courses</a>
+                <a class="navigation-bar-a" href="http://localhost:3000/users">Users</a>
+                <a class="navigation-bar-a" href="http://localhost:3000/subscribers">Subscribers</a>
+                <a class="navigation-bar-a" href="http://localhost:3000/chat">Chat</a>
+                <label class="navigation-bar-a" id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
+                    Latest Courses
+                </label>
+                <%if(loggedIn){ %>
+                    <p class="logout">Logged in as : <a href="<%= `/users/${currentUser._id}`%>"><%= currentUser.fullName%></a> <a href="<%= `/users/logout` %>">Logout</a></p>
+                <% } else {%>
+                    <p class="login"><a href="<%= `/users/login`%>">Login</a></p>
+                <% } %>
+            </div>
+        </div>
+        <div > 
+            <% if(flashMessages) {%>
                 <%if(flashMessages.success) {%>
-                    <div class='flash success'><%=flashMessages.success%></div>
+                    <div class="alert success" >
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <%= flashMessages.success%>
+                    </div>
                 <%} else if(flashMessages.error) {%>
-                    <div class='flash error'><%=flashMessages.error%></div>
+                    <div class="alert error">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <%= flashMessages.error%>
+                    </div>
                 <%}%>
             <%}%>
         </div>
-        <div>
-            <% if(loggedIn) {%>
-                <p>Logged in as <a href="<%=`/users/${currentUser._id}`%>"><%= currentUser.fullName %></a>
-                    <a href="<%= `/users/logout`%>">Log out</a></p>
-            <% } else { %>
-                <a href="<%=`/users/login`%>">Log in</a>
-            <% } %>
-        </div>
-        <div>
-            <% if(loggedIn) {%>
-                <div id="apiToken" data-token="<%= currentUser.apiToken%>" style="display : none;"></div>
-            <%}%>
-        </div>
-        <%-body%>
+        <div id="chat-icon" class="notification-box">
+            <span class="notification-count" ></span>
+            <div class="notification-bell">
+              <span class="bell-top"></span>
+              <span class="bell-middle"></span>
+              <span class="bell-bottom"></span>
+              <span class="bell-rad"></span>
+            </div>
+        </div>   
+        <%- include('courses/_courseModal.ejs')%>
+        <%- body%>
         <script type=" text/javascript" src='js/bootstrap.min.js' ></script>
         <script type=" text/javascript" src='js/jQuery.min.js' ></script>
         <script src="/socket.io/socket.io.js" > </script>
         <script type="text/javascript" src='js/confettiCuisine.js' ></script>
     </body>
-    
 </html>

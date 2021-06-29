@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js"
+    "start": "node main.js",
+    "server": "nodemon main.js"
   },
   "author": "Pavan Kumar",
   "license": "ISC",
@@ -23,6 +24,8 @@
     "method-override": "^3.0.0",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.10",
+    "node-snackbar": "^0.1.16",
+    "nodemon": "^2.0.7",
     "passport": "^0.4.1",
     "passport-local-mongoose": "^6.1.0",
     "rand-token": "^1.0.1",

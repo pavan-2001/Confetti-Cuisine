@@ -23,12 +23,6 @@ exports.showCourses = (request, response) => {
     });
 } ;
 
-exports.showSignUp = (request, response) => {
-    response.render('contact', {
-        contacts : this.myData
-    }); 
-};
-
 exports.postedSignUpForm = (request, response) => {
     response.render('thanks');
 };

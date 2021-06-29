@@ -15,6 +15,6 @@ router.put('/:id/update', subscriberController.update, subscriberController.redi
 
 router.get('/:id', subscriberController.show, subscriberController.showView);
 
-router.delete('/:id', subscriberController.delete, subscriberController.redirectView);
+router.delete('/:id/delete', subscriberController.delete, subscriberController.redirectView);
 
 module.exports = router;

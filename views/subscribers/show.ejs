@@ -1,17 +1,18 @@
 <h2>Subscriber data for <%=subscriber.name %></h2>
-<table>
-    <tr>
-        <th>Name</th>
-        <td><%=subscriber.name%></td>
-    </tr>
-    <tr>
-        <th>Email</th>
-        <td><%=subscriber.email%></td>
-    </tr>
-    <tr>
-        <th>Zip Code</th>
-        <td><%=subscriber.zipCode%></td>
-    </tr>
-</table>
-
+<div class="table-wrapper">
+    <table class="fl-table">
+        <tr>
+            <th>Name</th>
+            <td><%=subscriber.name%></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><%=subscriber.email%></td>
+        </tr>
+        <tr>
+            <th>Zip Code</th>
+            <td><%=subscriber.zipCode%></td>
+        </tr>
+    </table>
+</div>
 <p>This subscriber has <%=subscriber.courses.length%> associated course(s)</p>

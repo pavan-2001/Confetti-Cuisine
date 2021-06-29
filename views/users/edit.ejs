@@ -1,14 +1,25 @@
-<form action="<%=`/users/${user._id}/update?_method=PUT`%>" method='POST'>
-    <h2>Edit the existing user</h2>
-    <label for='inputFirst'>First Name</label>
-    <input type='text' id='inputFirst' name='first' value='<%=user.name.first %>' placeholder='First Name' autofocus>
-    <label for='inputLast'>Last Name</label>
-    <input type='text' id='inputLast' name='last' value='<%=user.name.last %>' placeholder='Last Name' required>
-    <label for='inputEmail'>Email</label>
-    <input type='text' id='inputEmail' name='email' value='<%=user.email%>' placeholder='Email'  required>
-    <label for='inputZipCode'>Zip Code</label>
-    <input type='number' id='inputZipCode' name='zipCode' value='<%=user.zipCode%>' placeholder='Zip Code' pattern='[0-9]{5}' required>
-    <label for="inputPassword">Password</label>
-    <input type="password" id="inputPassword" name="password" value="<%=user.password%>" placeholder="Password" required>
-    <button type='submit'>Save</button>
+<form class="form" action="<%=`/users/${user._id}/update?_method=PUT`%>" method='POST'>
+    <div class="title">Welcome</div>
+    <div class="subtitle">Edit the existing User</div>
+    <div class="input-container ic1">
+        <input type='text' id='inputFirst' class="input" name='first' placeholder=' ' value="<%=user.name.first%>" autofocus>
+        <div class="cut"></div>
+        <label for="inputFirst" class="placeholder">First Name</label>
+    </div>
+    <div class="input-container ic2">
+        <input class="input" type="text" id="inputlast" placeholder=" " name='last' value="<%=user.name.last%>" >
+        <div class="cut cut-short"></div>
+        <label for=" inputlast" class="placeholder" >Last Name</label>
+    </div>
+    <div class="input-container ic2">
+        <input class="input" type="text" id="inputEmail" placeholder=" " name='email' value="<%=user.email%>" >
+        <div class="cut cut-short"></div>
+        <label for=" inputEmail" class="placeholder" >Email</label>
+    </div>
+    <div class="input-container ic2">
+        <input class="input" type="number" id="inputZipCode" placeholder=" " name='zipCode' value="<%=user.zipCode%>" >
+        <div class="cut cut-short"></div>
+        <label for="inputZipCode" class="placeholder" >Zip Code</label>
+    </div>
+    <button type="submit" class="submit">Submit</button>
 </form>

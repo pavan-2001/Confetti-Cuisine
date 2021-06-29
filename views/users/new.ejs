@@ -1,16 +1,30 @@
-<div class='data-form' >
-    <form action='/users/create' method='POST' >
-        <h2>Create a new user</h2>
-        <label for='inputFirst' >First</label>
-        <input id='inputFirst' name='first' type='text' placeholder='First' autofocus>
-        <label for='inputLast' >Last</label>
-        <input id='inputLast' name='last' type='text' placeholder='Last' >
-        <label for='inputEmail'>Email</label>
-        <input type='text' id='inputEmail' name='email' placeholder='Email' >
-        <label for='inputZipCode'>Zip Code</label>
-        <input type='Number' id='inputZipCode' name='zipCode' pattern='[0-9]{5}' placeholder='Zip Code' >
-        <label for="inputPassword">Password</label>
-        <input type="password" id="inputPassword" name="password" placeholder="Password" >
-        <button type='submit'>Create</button>
-    </form>
-</div>
+<form class="form-user-new" action='/users/create' method='POST' >
+    <div class="title">Welcome</div>
+    <div class="subtitle">Edit the existing User</div>
+    <div class="input-container ic1">
+        <input type='text' id='inputFirst' class="input" name='first' placeholder=' ' required autofocus>
+        <div class="cut"></div>
+        <label for="inputFirst" class="placeholder">First Name</label>
+    </div>
+    <div class="input-container ic2">
+        <input class="input" type="text" id="inputlast" placeholder=" " name='last' required>
+        <div class="cut cut-short"></div>
+        <label for=" inputlast" class="placeholder" >Last Name</label>
+    </div>
+    <div class="input-container ic2">
+        <input class="input" type="text" id="inputEmail" placeholder=" " name='email' required>
+        <div class="cut cut-short"></div>
+        <label for=" inputEmail" class="placeholder" >Email</label>
+    </div>
+    <div class="input-container ic2">
+        <input class="input" type="number" id="inputZipCode" placeholder=" " name='zipCode' required>
+        <div class="cut cut-short"></div>
+        <label for="inputZipCode" class="placeholder" >Zip Code</label>
+    </div>
+    <div class="input-container ic2">
+        <input class="input" type="password" id="inputPassword" placeholder=" " name='password' required>
+        <div class="cut cut-short"></div>   
+        <label for="inputPassword" class="placeholder" >Password</label>
+    </div>
+    <button type="submit" class="submit">Submit</button>
+</form>

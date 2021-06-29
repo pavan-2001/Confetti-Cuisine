@@ -7,22 +7,28 @@ $(document).ready(() => {
             data.courses.forEach((course) => {
                 $(".modal-body").append(`
                     <div>
-                        <span class="course-cost" >${course.cost}</span>
+                        <span class="course-cost" >$${course.cost}</span>
                         <span class="course-title" >
                         ${course.title}
                         </span>
-                        <button class="${course.joined ? "joined-button" : "join-button"} btn btn-info btn-sm" data-id="${course._id}" >
+                        <button style="color:black;" class="${course.joined ? "joined-button" : "join-button"} btn btn-info btn-sm" data-id="${course._id}" >
                         ${course.joined ? "Joined" : "Join"}
                         </button>
                         <div class="course-description" >
-                        ${course.description}
+                        Description : ${course.description}
                         </div>
                     </div>
                 `);
             });
         }).then(() => {
             addJoinButtonListener();
+        }).then(() => {
+            $("#myModal").css('display', 'block');
         });
+        
+    });
+    $(".btn").click(function() {
+        $("#myModal").css('display', 'none');
     });
 });
 
@@ -34,7 +40,7 @@ let addJoinButtonListener = () => {
             let data = results.data;
             if(data && data.success) {
                 $button
-                .text("joined")
+                .text("Joined")
                 .addClass("joined-button")
                 .removeClass("join-button");
             } else {
@@ -61,9 +67,9 @@ $("#chatForm").submit(() => {
 
 socket.on("message", (message) => {
     displayMessage(message);
-    for(let i=0;i<2;i++) {
-        $(".chat-icon").fadeOut(200).fadeIn(200);
-    }
+    setTimeout(() => {
+        $(".notification-count").text("1");
+    }, 3000);
 });
 
 socket.on("load all messages", (data) => {
@@ -72,13 +78,20 @@ socket.on("load all messages", (data) => {
     });
 });
 
+
+
 let displayMessage = (message) => {
-    $("#chat").prepend($("<li>").html(`<div class='message ${getCurrentUserClass(message.user)}' >
-        <span class="user-name" >
-            ${message.userName} : 
-        </span>
-        ${message.content}
-    </div>`));
+    $(".chat-list").prepend($("<li>").html(`<li class="in">
+    <div class="chat-img">
+        <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+    </div>
+    <div class="chat-body">
+        <div class="chat-message">
+            <h5>${message.userName}</h5>
+            <p>${message.content}</p>
+        </div>
+    </div>
+    </li>`));
 };
 
 let getCurrentUserClass = (id) => {

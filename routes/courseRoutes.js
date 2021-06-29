@@ -13,6 +13,6 @@ router.put('/:id/update', courseController.update, courseController.redirectView
 
 router.get('/:id', courseController.show, courseController.showView);
 
-router.delete('/:id', courseController.delete, courseController.redirectView);
+router.delete('/:id/delete', courseController.delete, courseController.redirectView);
 
 module.exports = router;
