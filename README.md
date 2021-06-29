@@ -15,4 +15,4 @@
 ## Screenshots
 
 **Title and Navigation bar**
-![alt text](/screenshots/Header.jpg)
+![alt text](/screenshots/Header.jpg =100x20)
