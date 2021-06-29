@@ -21,3 +21,33 @@
 **Home Page**
 
 ![alt text](/screenshots/Home_Page_Content.jpg)
+
+**API Modal**
+![alt text](/screenshots/API_Modal.jpg)
+
+**Chat Page**
+![alt text](/screenshots/Chat_Page.jpg)
+
+**Course Information Display**
+![alt text](/screenshots/Course_Information.jpg)
+
+**Course Table**
+![alt text](/screenshots/Course_Table.jpg)
+
+**Course Data Editing Form**
+![alt text](/screenshots/Editing_Courses.jpg)
+
+**Error Page**
+![alt text](/screenshots/Error_Page.jpg)
+
+**Login Form**
+![alt text](/screenshots/Login.jpg)
+
+**New Courses Form**
+![alt text](/screenshots/New_Courses_Form.jpg)
+
+**Subscribers Table**
+![alt text](/screenshots/Subscribers_table.jpg)
+
+**Users Table**
+![alt text](/screenshots/Users_Table.jpg)
