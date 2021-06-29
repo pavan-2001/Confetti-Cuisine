@@ -11,3 +11,8 @@
 * I've used that API by creating a pop-out window with a list of data accessed through an API endpoint. 
 * I secured my API by creating an API token system.
 * There is a fully functioning live-chat feature in my application that allow users to connect to one another.
+
+## Screenshots
+
+**Title and Navigation bar**
+![alt text](/screenshots/Header.jpg?raw=true)
