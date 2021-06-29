@@ -16,8 +16,8 @@
 
 **Title and Navigation bar**
 
-[<img src="/screenshots/Header.jpg"/>](/screenshots/Header.jpg)
+![alt text](/screenshots/Header.jpg)
 
 **Home Page**
 
-[<img src="/screenshots/Home_Page_Content.jpg" width="400" height="300"/>](/screenshots/Home_Page_Content.jpg)
+![alt text](/screenshots/Home_Page_Content.jpg)
