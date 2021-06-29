@@ -16,7 +16,7 @@
 
 **Title and Navigation bar**
 
-[<img src="/screenshots/Header.jpg" width="400" height="300"/>](/screenshots/Header.jpg)
+[<img src="/screenshots/Header.jpg"/>](/screenshots/Header.jpg)
 
 **Home Page**
 
