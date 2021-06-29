@@ -52,7 +52,7 @@
 
 **New Courses Form**
 
-![alt text](/screenshots/New_Courses_Form.jpg)
+![alt text](/screenshots/New_Course_Form.jpg)
 
 **Subscribers Table**
 
