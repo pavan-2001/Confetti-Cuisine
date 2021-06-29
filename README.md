@@ -15,4 +15,4 @@
 ## Screenshots
 
 **Title and Navigation bar**
-![alt text](/screenshots/Header.jpg?raw=true)
+![alt text](/screenshots/Header.jpg)
