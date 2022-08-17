@@ -1,6 +1,6 @@
 # Confetti-Cuisine
 
-* It is a fully designed web application using **MERN** stack.
+* It is a fully designed web application using **Node.js**, **MongoDB** .
 * This application shows how to save application data through the minimum database theory needed to connect a database. 
 * The data is organized using mongoose models. 
 * I've used MVC (Modal-View-Controller) architecture. 
