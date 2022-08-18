@@ -1,22 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rouge+Script&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rouge+Script&display=swap'); */
 
 
+body{
+  overflow-x: hidden;
+  width:99%;
+  /* background-color: #15172b; */
+}
 .navigation-bar {
     overflow: hidden;
     font-family: 'Rouge Script', cursive;
     font-weight: 1000;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 4px #00000080;
+    background-color: white;
+    margin-top: -6%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3%;
+    width: 100%;
 }
 .navigation-bar-a {
     float: left;
-    color : white;
+    color : black;
     text-align: center;
-    padding: 14px 16px;
+    margin: 1%;
     text-decoration: none;
-    font-size: 50px;
-    width: 150px;
-    font-weight: 1000;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    width: 10%;
+    border-radius: 10%;
+    font-family: 'Rouge Script';
+    cursor: pointer;
 }
 .navigation-bar-menu {
   float: left;
@@ -69,15 +84,16 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 0 0 85% 85% / 30%;
+  border-radius: 0 0 70% 70% / 40%;
+  background-color: #08d;
+  margin: auto;
 }
 .sample-header-section {
   position: relative;
-  padding: 15% 0 10%;
+  /* padding: 15% 0 10%; */
   max-width: fit-content;
+  width: fit-content;
   margin-top: -7%;
-  padding-top: 5%;
-  padding-bottom: 0%;
   margin-left: auto;
   margin-right: auto;
   color: white; 
@@ -93,15 +109,14 @@ h1 {
 }
 .home-section {
   position: relative;
-  margin-left: auto;
+  margin: auto;
   max-width: 800px;
-  margin-right: auto;
   padding: 80px;
-  font-size: 50px;
+  font-size: 25px;
   color : black;
-  font-family: 'Rouge Script', cursive;
-  font-weight: 1000;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Rouge Script';
+  font-weight: 800;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 .alert {
   padding: 20px;
@@ -300,33 +315,57 @@ h2{
 }
 
 .table-wrapper{
-  margin: 10px 80px 80px;
+  /* margin: 10px 80px 80px; */
+  margin : auto;
+  background-color: #06b;
+  width: 80%;
+  align-items: center;
   box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+  /* padding: 1%; */
 }
 
 .fl-table {
   border-radius: 5px;
-  font-size: 30px;
-  font-weight: normal;
+  font-size: 25px;
   border: none;
   border-collapse: collapse;
   width: 100%;
-  max-width: 100%;
+  /* max-width: 100%; */
   white-space: nowrap;
   background-color: white;
-  font-family: 'Rouge Script', cursive;
+  font-family: 'Rouge Script';
   font-weight : 1000; 
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); */
+  /* text-transform: capitalize; */
+  margin: auto;
 }
 .fl-table a {
   text-decoration: none;
   color : black;
+  text-transform: capitalize;
+  font-size: 20px;
 }
+
+.fl-table .description{
+  font-size: 20px;
+  font-family: 'Rouge Script';
+  text-transform: capitalize;
+}
+
+.fl-table .email{
+  font-size: 20px;
+  font-family: 'Rouge Script';
+  
+}
+
 
 .fl-table td, .fl-table th {
   text-align: center;
   padding: 8px;
+  width: 25%;
 }
+
+
 
 .fl-table td {
   border-right: 1px solid #f8f8f8;
@@ -750,4 +789,41 @@ h2{
 
 .msg a:hover {
   text-decoration: underline;
+}
+
+.pageTitle {
+  /* background-color: #06b; */
+  width: 25%;
+  font-size: 5ch;
+  align-self: center;
+  margin: auto;
+  font-family: 'Rouge Script';
+}
+
+.information{
+  background-color: white;
+  width : 80%;
+  align-self: center;
+  margin: auto;
+  font-family: 'Rouge Script';
+}
+
+.information h1{
+  background-color: white;
+  width: 40%;
+  align-self: center;
+  margin: auto;
+  margin-top: 4%;
+  font-family: 'Rouge Script'
+}
+.information p{
+  background-color: white;
+  width: 40%;
+  font-size: 25px;
+  align-self: center;
+  margin: auto;
+  margin-top: 4%;
+  margin-left: 35%;
+  font-weight: 100;
+  font-family: 'Rouge Script';
 }

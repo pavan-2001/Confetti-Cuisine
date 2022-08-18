@@ -1,4 +1,4 @@
-<h2 class='center' >Users Table</h2>
+<h2 class='pageTitle' >Users Table</h2>
 <div class="table-wrapper">
     <table class='fl-table' >
         <thead>
@@ -15,7 +15,7 @@
                     <td>
                         <a href="<%= `/users/${user._id}`%>"><%= user.fullName %></a>
                     </td>
-                    <td>
+                    <td class="email">
                         <%= user.email %>
                     </td>
                     <td>

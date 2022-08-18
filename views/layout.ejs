@@ -16,19 +16,23 @@
             <div class="sample-header-section">
               <h1>Confetti Cuisine</h1>
             </div>
-            <div class="navigation-bar">
+        </div>
+            <div class="navigation-bar" > 
                 <a class="navigation-bar-a" href="http://localhost:3000">Home</a>
                 <a class="navigation-bar-a" href="http://localhost:3000/courses">Courses</a>
                 <a class="navigation-bar-a" href="http://localhost:3000/users">Users</a>
                 <a class="navigation-bar-a" href="http://localhost:3000/subscribers">Subscribers</a>
                 <a class="navigation-bar-a" href="http://localhost:3000/chat">Chat</a>
-                <label class="navigation-bar-a" id="modal-button" type="button" data-toggle="modal" data-target="#myModal">
+                
+                <label class="navigation-bar-a" id="modal-button" type="button" data-toggle="modal" data-target="#myModal" >
                     Latest Courses
                 </label>
                 <%if(loggedIn){ %>
-                    <p class="logout">Logged in as : <a href="<%= `/users/${currentUser._id}`%>"><%= currentUser.fullName%></a> <a href="<%= `/users/logout` %>">Logout</a></p>
+                    <a class="navigation-bar-a" href="<%= `/users/${currentUser._id}`%>"><%= currentUser.fullName%> (User)</a>
+                    <a class="navigation-bar-a" href="<%= `/users/logout` %>">Logout</a>
                 <% } else {%>
-                    <p class="login"><a href="<%= `/users/login`%>">Login</a></p>
+                    <a class="navigation-bar-a" href="<%= `/users/login`%>">Login</a>
+                    <a class="navigation-bar-a" href="<%= `/users/new`%>">Register</a>  
                 <% } %>
             </div>
         </div>
@@ -47,7 +51,7 @@
                 <%}%>
             <%}%>
         </div>
-        <div id="chat-icon" class="notification-box">
+        <!-- <div id="chat-icon" class="notification-box">
             <span class="notification-count" ></span>
             <div class="notification-bell">
               <span class="bell-top"></span>
@@ -55,7 +59,7 @@
               <span class="bell-bottom"></span>
               <span class="bell-rad"></span>
             </div>
-        </div>   
+        </div>    -->
         <%- include('courses/_courseModal.ejs')%>
         <%- body%>
         <script type=" text/javascript" src='js/bootstrap.min.js' ></script>

@@ -1,5 +1,5 @@
 <% if(currentUser) { %>
-    <h2>Chat</h2>
+    <h2 class="pageTitle" >Chat</h2>
     <form id="chatForm">
         <div class="input-container ic2">
             <input class="input-chat" type="text" id="chat-input" placeholder=" ">
@@ -20,5 +20,10 @@
                 </div>
             </div>
         </div>
+    </div>
+<% } else {%>
+    <div class="information">
+        <h1>Oops...!</h1>
+        <p> You can't chat without logging in...</p>
     </div>
 <% } %>
