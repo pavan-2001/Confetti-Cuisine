@@ -1,18 +1,20 @@
-<h2>Subscriber data for <%=subscriber.name %></h2>
-<div class="table-wrapper">
-    <table class="fl-table">
-        <tr>
-            <th>Name</th>
-            <td><%=subscriber.name%></td>
-        </tr>
-        <tr>
-            <th>Email</th>
-            <td><%=subscriber.email%></td>
-        </tr>
-        <tr>
-            <th>Zip Code</th>
-            <td><%=subscriber.zipCode%></td>
-        </tr>
-    </table>
+<div>
+    <h2 class="pageTitle">Subscriber data</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <tr>    
+                <th class="showTh">Name</th>
+                <td class="showTh"><%=subscriber.name%></td>
+            </tr>
+            <tr>
+                <th class="showTh">Email</th>
+                <td class="email"><%=subscriber.email%></td>
+            </tr>
+            <tr>
+                <th class="showTh">Zip Code</th>
+                <td class="showTh"><%=subscriber.zipCode%></td>
+            </tr>
+        </table>
+    </div>
+    <p style="background-color: white; width: 40%; margin : auto; align-self : center; margin-top : 5%; font-size : 4ch">This subscriber has <%=subscriber.courses.length%> associated course(s)</p>
 </div>
-<p>This subscriber has <%=subscriber.courses.length%> associated course(s)</p>

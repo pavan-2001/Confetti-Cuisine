@@ -1,21 +1,23 @@
-<h2>User data for <%=user.fullName %></h2>
-<div class="table-wrapper">
-    <table class="fl-table">
-        <tr>
-            <th>Name</th>
-            <td><%=user.fullName%></td>
-        </tr>
-        <tr>
-            <th>Email</th>
-            <td><%=user.email%></td>
-        </tr>
-        <tr>
-            <th>Zip Code</th>
-            <td><%=user.zipCode%></td>
-        </tr>
-        <tr>
-            <th>API Token</th>
-            <td><%= user.apiToken%></td>
-        </tr>
-    </table>
+<div>
+    <h2 class="pageTitle">User data</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <tr>
+                <th class="showTh">Name</th>
+                <td class="showTh"><%=user.fullName%></td>
+            </tr>
+            <tr>
+                <th class="showTh">Email</th>
+                <td class="email"><%=user.email%></td>
+            </tr>
+            <tr>
+                <th class="showTh">Zip Code</th>
+                <td class="showTh"><%=user.zipCode%></td>
+            </tr>
+            <tr>
+                <th class="showTh">API Token</th>
+                <td class="email"><%= user.apiToken%></td>
+            </tr>
+        </table>
+    </div>
 </div>

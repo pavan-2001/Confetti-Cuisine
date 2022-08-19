@@ -1,35 +1,37 @@
-<h2 class='pageTitle' >Subscribers Table</h2>
-<div class="table-wrapper">
-    <table class='fl-table' >
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% subscribers.forEach( (subscriber) => { %>
+<div>
+    <h2 class='pageTitle' >Subscribers Table</h2>
+    <div class="table-wrapper">
+        <table class='fl-table' >
+            <thead>
                 <tr>
-                    <td>
-                        <a href="<%= `/subscribers/${subscriber._id}`%>"><%= subscriber.name %></a>
-                    </td>
-                    <td class="email">
-                        <%= subscriber.email %>
-                    </td>
-                    <td>
-                        <a href="<%=`/subscribers/${subscriber._id}/edit`%>">
-                            edit
-                        </a>
-                    </td>
-                    <td>
-                        <a href="<%=`/subscribers/${subscriber._id}/delete?_method=DELETE`%>" onclick="return confirm('Are you sure you want to delete this record?')" > 
-                            delete
-                        </a>
-                    </td>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
-            <%}) %>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <% subscribers.forEach( (subscriber) => { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `/subscribers/${subscriber._id}`%>"><%= subscriber.name %></a>
+                        </td>
+                        <td class="email">
+                            <%= subscriber.email %>
+                        </td>
+                        <td>
+                            <a href="<%=`/subscribers/${subscriber._id}/edit`%>">
+                                edit
+                            </a>
+                        </td>
+                        <td>
+                            <a href="<%=`/subscribers/${subscriber._id}/delete?_method=DELETE`%>" onclick="return confirm('Are you sure you want to delete this record?')" > 
+                                delete
+                            </a>
+                        </td>
+                    </tr>
+                <%}) %>
+            </tbody>
+        </table>
+    </div>
 </div>
