@@ -460,16 +460,45 @@ h2{
   }
 }
 
+.courseContainer {
+  width: 50%;
+  margin: 1%;
+  /* background-color: #06b; */
+  /* height: 545px; */
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+  flex: auto;
+  font-family: 'Rouge Script';
+}
+
+.courseContainer .formTitle {
+  background-color: white;
+  margin: 1%;
+  font-size: 5ch;
+  width: 50%;
+  align-self: center;
+  font-family: 'Rouge Script';
+  /* margin-left: %; */
+  height: 30px;
+}
+
 .form {
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 570px;
+  /* height: 570px; */
+  /* display: flex; */
   padding: 20px;
-  width: 500px;
-  margin-top : 5%;
+  width: 50%;
+  align-self: center;
+  /* margin-top : 5%;
   margin-left : 35%;
-  margin-bottom : 5%;
+  margin-bottom : 5%; */
+  margin: auto ;
 }
 
 .title {
@@ -581,28 +610,7 @@ h2{
 .submit:active {
   background-color: #06b;
 }
-.form-login {
-  background-color: #15172b;
-  border-radius: 20px;
-  box-sizing: border-box;
-  height: 350px;
-  padding: 20px;
-  width: 500px;
-  margin-top : 5%;
-  margin-left : 35%;
-  margin-bottom : 5%;
-}
-.form-user-new {
-  background-color: #15172b;
-  border-radius: 20px;
-  box-sizing: border-box;
-  height: 650px;
-  padding: 20px;
-  width: 500px;
-  margin-top : 5%;
-  margin-left : 35%;
-  margin-bottom : 5%;
-}
+
 .chat-list {
   padding: 0;
   font-size: .8rem;

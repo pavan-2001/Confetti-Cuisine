@@ -1,25 +1,26 @@
-<form class="form" action="/courses/create" method="POST">
-    <div class="title">Welcome</div>
-    <div class="subtitle">Create a new course</div>
-    <div class="input-container ic1">
-        <input type='text' id='inputTitle' class="input" name='title' placeholder=' ' autofocus required>
-        <div class="cut"></div>
-        <label for="inputTitle" class="placeholder">Title</label>
-    </div>
-    <div class="input-container ic2">
-        <input class="input" type="text" id="inputDescription" placeholder=" " name='description' required>
-        <div class="cut cut-short"></div>
-        <label for=" inputDescription" class="placeholder" >Description</label>
-    </div>
-    <div class="input-container ic2">
-        <input class="input" type="text" id="inputMaxStudents" placeholder=" " name='maxStudents' required>
-        <div class="cut cut-short"></div>
-        <label for="inputMaxStudents" class="placeholder" >Max Students</label>
-    </div>
-    <div class="input-container ic2">
-        <input class="input" type="number" id="inputCost" placeholder=" " name='cost' required>
-        <div class="cut cut-short"></div>
-        <label for="inputCost" class="placeholder" >Cost</label>
-    </div>
-    <button type="submit" class="submit">Submit</button>
-</form>
+<div class="courseContainer">
+    <h2 class="formTitle">Add a Course</h2>
+    <form class="form" action="/courses/create" method="POST">
+        <div class="input-container ic1">
+            <input type='text' id='inputTitle' class="input" name='title' placeholder=' ' autofocus required>
+            <div class="cut"></div>
+            <label for="inputTitle" class="placeholder">Title</label>
+        </div>
+        <div class="input-container ic2">
+            <input class="input" type="text" id="inputDescription" placeholder=" " name='description' required>
+            <div class="cut cut-short"></div>
+            <label for=" inputDescription" class="placeholder" >Description</label>
+        </div>
+        <div class="input-container ic2">
+            <input class="input" type="text" id="inputMaxStudents" placeholder=" " name='maxStudents' required>
+            <div class="cut cut-short"></div>
+            <label for="inputMaxStudents" class="placeholder" >Max Students</label>
+        </div>
+        <div class="input-container ic2">
+            <input class="input" type="number" id="inputCost" placeholder=" " name='cost' required>
+            <div class="cut cut-short"></div>
+            <label for="inputCost" class="placeholder" >Cost</label>
+        </div>
+        <button type="submit" class="submit">Submit</button>
+    </form>
+</div>
